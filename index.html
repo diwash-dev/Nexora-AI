@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Nexora AI — The most powerful AI platform for modern teams.">
+<title>Nexora AI — Intelligence, Elevated</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<div class="back-top" id="backTop" title="Back to top">↑</div>
+
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">✦</div>
+        Nexora AI
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#" class="btn-ghost" data-toast='["👋","Welcome back!","Sign-in flow coming soon…"]'>Log in</a>
+        <a href="#" class="btn-primary" data-toast='["🚀","You're on the list!","We'll be in touch shortly."]'>Get Started →</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#features" class="mobile-link">Features</a>
+  <a href="#pricing"  class="mobile-link">Pricing</a>
+  <a href="#how"      class="mobile-link">How It Works</a>
+  <a href="#faq"      class="mobile-link">FAQ</a>
+  <a href="#contact"  class="mobile-link">Contact</a>
+  <div class="mobile-menu-divider"></div>
+  <div class="mobile-menu-cta">
+    <a href="#" class="btn-ghost  mobile-link" data-toast='["👋","Welcome back!","Sign-in flow coming soon…"]'>Log in</a>
+    <a href="#" class="btn-primary mobile-link" data-toast='["🚀","You're on the list!","We'll be in touch shortly."]'>Get Started Free →</a>
+  </div>
+</div>
+
+<section class="hero" id="home">
+  <div class="orb hero-orb-1"></div>
+  <div class="orb hero-orb-2"></div>
+  <div class="orb hero-orb-3"></div>
+  <div class="container">
+    <div class="hero-layout">
+
+      <!-- Left -->
+      <div class="hero-content reveal">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot">✦</span>
+          Now powered by Nexora 3.0 Model
+        </div>
+        <h1 class="hero-h1">
+          Your AI<br>
+          <span class="grad-text">Co-Pilot for</span><br>
+          Everything
+        </h1>
+        <p class="hero-sub">
+          Nexora AI supercharges your workflow with next-generation intelligence — automate tasks, generate insights, and ship 10× faster with the most capable AI platform available.
+        </p>
+        <div class="hero-btns">
+          <a href="#" class="btn-hero-primary" data-toast='["🚀","You are on the list!","We will be in touch shortly."]'>Get Started Free →</a>
+          <a href="#features" class="btn-hero-secondary">▶ Explore Features</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-val grad-text" data-count="500">0</div>
+            <div class="hero-stat-lab">K+ Active Users</div>
+          </div>
+          <div>
+            <div class="hero-stat-val grad-text">99.9%</div>
+            <div class="hero-stat-lab">Uptime SLA</div>
+          </div>
+          <div>
+            <div class="hero-stat-val grad-text">4.9★</div>
+            <div class="hero-stat-lab">User Rating</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Dashboard mockup -->
+      <div class="hero-visual reveal" style="transition-delay:.15s">
+        <div class="hero-visual-wrap">
+          <div class="dashboard-card">
+            <div class="dash-topbar">
+              <div class="dash-dot"></div><div class="dash-dot"></div><div class="dash-dot"></div>
+              <div class="dash-tab">
+                <span class="active">Overview</span>
+                <span>Analytics</span>
+                <span>AI Insights</span>
+              </div>
+            </div>
+            <div class="dash-body">
+              <div class="dash-row">
+                <div class="dash-metric">
+                  <div class="dash-metric-lbl">Revenue</div>
+                  <div class="dash-metric-val">$84.2K</div>
+                  <div class="dash-metric-change pos">▲ 12.4%</div>
+                </div>
+                <div class="dash-metric">
+                  <div class="dash-metric-lbl">Users</div>
+                  <div class="dash-metric-val">24.8K</div>
+                  <div class="dash-metric-change pos">▲ 8.1%</div>
+                </div>
+                <div class="dash-metric">
+                  <div class="dash-metric-lbl">Churn</div>
+                  <div class="dash-metric-val">1.2%</div>
+                  <div class="dash-metric-change neg">▼ 0.3%</div>
+                </div>
+              </div>
+              <div class="dash-chart">
+                <div class="dash-chart-title">AI Processing Volume — Last 12 days</div>
+                <div class="chart-bars" id="dashBars">
+                  <div class="chart-bar" style="height:42%"></div>
+                  <div class="chart-bar" style="height:58%"></div>
+                  <div class="chart-bar" style="height:35%"></div>
+                  <div class="chart-bar" style="height:72%"></div>
+                  <div class="chart-bar active" style="height:90%"></div>
+                  <div class="chart-bar" style="height:65%"></div>
+                  <div class="chart-bar" style="height:78%"></div>
+                  <div class="chart-bar" style="height:55%"></div>
+                  <div class="chart-bar" style="height:88%"></div>
+                  <div class="chart-bar" style="height:44%"></div>
+                  <div class="chart-bar" style="height:62%"></div>
+                  <div class="chart-bar" style="height:95%"></div>
+                </div>
+              </div>
+              <div class="dash-ai-row">
+                <div class="ai-icon">✦</div>
+                <div class="ai-text-block">
+                  <div class="ai-text-title">Nexora AI Recommendation</div>
+                  <div class="ai-text-line" style="width:100%"></div>
+                  <div class="ai-text-line" style="width:72%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="float-card float-card-1">
+            <div class="fc-label">AI Score</div>
+            <div class="fc-val grad-text">98.4</div>
+            <div class="fc-bar" style="width:98%"></div>
+          </div>
+          <div class="float-card float-card-2">
+            <div class="fc-label">Tasks Automated</div>
+            <div class="fc-val">1,284</div>
+            <div class="fc-bar" style="width:80%;background:linear-gradient(90deg,#06B6D4,#6366F1)"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="trusted">
+  <div class="trusted-label">Trusted by 500,000+ teams at leading companies worldwide</div>
+  <div class="logos-track" aria-hidden="true">
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(59,130,246,.15)">⬡</div><div class="logo-name">Hexaflow</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(16,185,129,.15)">◈</div><div class="logo-name">Vortex</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(245,158,11,.15)">◆</div><div class="logo-name">Aurum</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(239,68,68,.15)">⬟</div><div class="logo-name">Redline</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(139,92,246,.15)">⬢</div><div class="logo-name">PulseIO</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(6,182,212,.15)">◉</div><div class="logo-name">Circula</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(99,102,241,.15)">◐</div><div class="logo-name">Stratyx</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(236,72,153,.15)">◑</div><div class="logo-name">Novella</div></div>
+    <!-- Duplicate for seamless loop -->
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(59,130,246,.15)">⬡</div><div class="logo-name">Hexaflow</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(16,185,129,.15)">◈</div><div class="logo-name">Vortex</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(245,158,11,.15)">◆</div><div class="logo-name">Aurum</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(239,68,68,.15)">⬟</div><div class="logo-name">Redline</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(139,92,246,.15)">⬢</div><div class="logo-name">PulseIO</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(6,182,212,.15)">◉</div><div class="logo-name">Circula</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(99,102,241,.15)">◐</div><div class="logo-name">Stratyx</div></div>
+    <div class="logo-item"><div class="logo-icon" style="background:rgba(236,72,153,.15)">◑</div><div class="logo-name">Novella</div></div>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-label reveal">
+      <div class="badge">✦ Core Features</div>
+      <h2 class="section-title">Everything you need to<br><span class="grad-text">move at AI speed</span></h2>
+      <p class="section-sub">Nexora packs every capability a modern team needs — from intelligent automation to real-time analytics — into one seamless platform.</p>
+    </div>
+    <div class="features-grid reveal-group">
+
+      <div class="feat-card">
+        <div class="feat-icon">🧠</div>
+        <div class="feat-title">Advanced Reasoning Engine</div>
+        <div class="feat-desc">Multi-step chain-of-thought reasoning for complex analysis. Nexora breaks down intricate problems and delivers clear, actionable conclusions.</div>
+        <a href="#" class="feat-link" data-toast='["🧠","Deep Reasoning","Docs coming soon!"]'>Learn more →</a>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">⚡</div>
+        <div class="feat-title">Real-Time AI Processing</div>
+        <div class="feat-desc">Sub-100ms response latency with streaming output. Process millions of tokens per minute without bottlenecks or cold starts.</div>
+        <a href="#" class="feat-link" data-toast='["⚡","Blazing Fast","Benchmark docs coming soon!"]'>Learn more →</a>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">🔗</div>
+        <div class="feat-title">Universal Integrations</div>
+        <div class="feat-desc">200+ native connectors including Slack, Notion, Salesforce, and GitHub. Build powerful automated pipelines in minutes, not months.</div>
+        <a href="#" class="feat-link" data-toast='["🔗","Integrations","200+ connectors ready!"]'>Learn more →</a>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">🛡️</div>
+        <div class="feat-title">Enterprise-Grade Security</div>
+        <div class="feat-desc">SOC 2 Type II certified with end-to-end encryption, private cloud deployment, and granular RBAC controls to keep your data safe.</div>
+        <a href="#" class="feat-link" data-toast='["🛡️","Security First","Trust centre coming soon!"]'>Learn more →</a>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">📊</div>
+        <div class="feat-title">AI Analytics & Insights</div>
+        <div class="feat-desc">Conversational BI that understands natural language queries. Ask questions in plain English and get live charts, forecasts, and summaries.</div>
+        <a href="#" class="feat-link" data-toast='["📊","AI Analytics","Dashboard demo coming soon!"]'>Learn more →</a>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">🎨</div>
+        <div class="feat-title">Custom AI Workflows</div>
+        <div class="feat-desc">Drag-and-drop workflow builder with conditional logic, loops, and branching. Deploy AI agents that run autonomously around the clock.</div>
+        <a href="#" class="feat-link" data-toast='["🎨","Workflows","Builder access coming soon!"]'>Learn more →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section preview" id="about">
+  <div class="orb preview-orb-1"></div>
+  <div class="orb preview-orb-2"></div>
+  <div class="container">
+    <div class="preview-inner">
+
+      <div class="preview-text reveal from-left">
+        <div class="badge">✦ AI Interface</div>
+        <h2 class="section-title">Talk to your data<br><span class="grad-text">like never before</span></h2>
+        <p class="section-sub">Nexora's conversational interface understands context, remembers history, and delivers precise answers from your connected data sources.</p>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="fi-dot">💬</div>
+            <div><div class="fi-title">Contextual Memory</div><div class="fi-desc">Retains full conversation context across sessions for seamless, coherent interactions.</div></div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-dot">🔍</div>
+            <div><div class="fi-title">Deep Data Search</div><div class="fi-desc">Instantly searches across all your connected docs, databases, and SaaS tools.</div></div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-dot">✨</div>
+            <div><div class="fi-title">One-Click Actions</div><div class="fi-desc">Execute tasks directly from chat — send emails, create tickets, or update records.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="preview-visual reveal from-right">
+        <div class="chat-mockup">
+          <div class="chat-header">
+            <div class="chat-avatar">✦</div>
+            <div>
+              <div class="chat-title">Nexora Assistant</div>
+              <div class="chat-status">Online — connected to 8 sources</div>
+            </div>
+          </div>
+          <div class="chat-body">
+            <div class="msg user"><div class="msg-av">👤</div><div class="msg-bubble">Show me revenue trends for Q2 and highlight any anomalies.</div></div>
+            <div class="msg ai"><div class="msg-av">✦</div><div class="msg-bubble">Analysing Q2 data across 3 sources…<br><br>📈 <strong>Total Revenue: $247K (+18% vs Q1)</strong><br>⚠️ <strong>Anomaly detected:</strong> Week 7 shows a 34% dip — correlates with the API outage on June 12th.<br><br>Shall I generate a full incident report?</div></div>
+            <div class="msg user"><div class="msg-av">👤</div><div class="msg-bubble">Yes — and forecast Q3 based on current trajectory.</div></div>
+            <div class="msg ai"><div class="msg-av">✦</div><div class="msg-bubble"><div class="typing"><span></span><span></span><span></span></div></div></div>
+          </div>
+          <div class="chat-input-row">
+            <div class="chat-input-fake">Ask Nexora anything…</div>
+            <button class="chat-send" data-toast='["✦","Nexora is thinking…","Try the live demo to unlock full chat!"]'>→</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section how" id="how">
+  <div class="container">
+    <div class="section-label reveal">
+      <div class="badge">✦ The Process</div>
+      <h2 class="section-title">Up and running in<br><span class="grad-text">under 5 minutes</span></h2>
+      <p class="section-sub">No PhD in AI required. Connect your tools, configure your agents, and let Nexora handle the heavy lifting.</p>
+    </div>
+    <div class="steps-grid reveal-group">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-title">Connect Your Stack</div>
+        <div class="step-desc">Link your existing tools — CRM, databases, cloud storage — through our one-click OAuth integrations. Zero code needed.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-title">Configure Your Agent</div>
+        <div class="step-desc">Use our visual builder to define workflows, set triggers, and grant your AI agent the permissions it needs to act autonomously.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-title">Train & Personalise</div>
+        <div class="step-desc">Feed Nexora your company docs, brand guidelines, and FAQs to create a fully customised AI that speaks your language.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-title">Deploy & Scale</div>
+        <div class="step-desc">Go live in one click. Monitor performance in real-time and scale capacity automatically as your usage grows.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-label reveal">
+      <div class="badge">✦ Pricing</div>
+      <h2 class="section-title">Simple, transparent<br><span class="grad-text">pricing</span></h2>
+      <p class="section-sub">Start free. Upgrade when you need more power. Cancel any time — no lock-ins, no surprises.</p>
+    </div>
+
+    <div class="pricing-toggle-wrap reveal">
+      <span class="toggle-label active-label" id="monthlyLabel">Monthly</span>
+      <div class="toggle-track" id="billingToggle" role="switch" aria-checked="false" tabindex="0">
+        <div class="toggle-thumb"></div>
+      </div>
+      <span class="toggle-label" id="yearlyLabel">Yearly</span>
+      <span class="save-badge">Save 25%</span>
+    </div>
+
+    <div class="pricing-grid reveal-group">
+
+      <div class="price-card">
+        <div class="price-plan">Free</div>
+        <div class="price-amount">
+          <span class="price-dollar">$</span>
+          <span class="price-num" data-monthly="0" data-yearly="0">0</span>
+          <span class="price-per">/ month</span>
+        </div>
+        <div class="price-desc">Perfect for individuals and side projects.</div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><span class="check">✓</span> 50 AI requests / day</li>
+          <li><span class="check">✓</span> 3 data source connections</li>
+          <li><span class="check">✓</span> Basic chat interface</li>
+          <li><span class="check">✓</span> Community support</li>
+          <li class="off"><span class="cross">✕</span> Custom AI agents</li>
+          <li class="off"><span class="cross">✕</span> Analytics dashboard</li>
+          <li class="off"><span class="cross">✕</span> API access</li>
+        </ul>
+        <a href="#" class="btn-plan btn-plan-ghost" data-toast='["🎉","Free plan activated!","No credit card required."]'>Get Started Free</a>
+      </div>
+
+      <div class="price-card popular">
+        <div class="popular-badge">MOST POPULAR</div>
+        <div class="price-plan" style="margin-top:16px">Pro</div>
+        <div class="price-amount">
+          <span class="price-dollar">$</span>
+          <span class="price-num grad-text" data-monthly="49" data-yearly="37">49</span>
+          <span class="price-per">/ month</span>
+        </div>
+        <div class="price-desc">For growing teams that need real power.</div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><span class="check">✓</span> Unlimited AI requests</li>
+          <li><span class="check">✓</span> 50 data source connections</li>
+          <li><span class="check">✓</span> Advanced chat + memory</li>
+          <li><span class="check">✓</span> Priority support (24/7)</li>
+          <li><span class="check">✓</span> 10 custom AI agents</li>
+          <li><span class="check">✓</span> Full analytics dashboard</li>
+          <li><span class="check">✓</span> API access (100K calls/mo)</li>
+        </ul>
+        <a href="#" class="btn-plan btn-plan-primary" data-toast='["🚀","Pro Trial Started!","14 days free, no card needed."]'>Start Pro Trial →</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-plan">Enterprise</div>
+        <div class="price-amount">
+          <span class="price-num" style="font-size:40px">Custom</span>
+        </div>
+        <div class="price-desc">Tailored solutions for large organisations.</div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><span class="check">✓</span> Unlimited everything</li>
+          <li><span class="check">✓</span> Private cloud deployment</li>
+          <li><span class="check">✓</span> SSO / SAML / SCIM</li>
+          <li><span class="check">✓</span> Dedicated success manager</li>
+          <li><span class="check">✓</span> Unlimited AI agents</li>
+          <li><span class="check">✓</span> Custom model fine-tuning</li>
+          <li><span class="check">✓</span> SLA + compliance package</li>
+        </ul>
+        <a href="#" class="btn-plan btn-plan-ghost" data-toast='["📅","Sales call booked!","Our team will reach out within 24h."]'>Talk to Sales →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section testimonials">
+  <div class="container">
+    <div class="section-label reveal">
+      <div class="badge">✦ Testimonials</div>
+      <h2 class="section-title">Loved by teams<br><span class="grad-text">worldwide</span></h2>
+      <p class="section-sub">Don't take our word for it. Here's what our users are building with Nexora AI.</p>
+    </div>
+    <div class="testi-grid reveal-group">
+
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"Nexora replaced three separate tools for us. The AI chat understands our internal docs better than our own team sometimes. Shipped a feature in 2 days that would've taken 2 weeks."</div>
+        <div class="testi-user">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#3B82F6,#6366F1)">S</div>
+          <div><div class="testi-name">Sita Sharma</div><div class="testi-role">Founder @ Hexaflow</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"The analytics dashboard alone is worth 10× the price. I asked it to find revenue leaks in our funnel — it found three in under a minute. Absolutely wild capability."</div>
+        <div class="testi-user">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#8B5CF6,#06B6D4)">M</div>
+          <div><div class="testi-name">Ram Thapa</div><div class="testi-role">supervisor @ Vortex</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"We onboarded 200 employees with Nexora as their first-day assistant. Knowledge transfer time dropped by 60%. The ROI was visible in the first month."</div>
+        <div class="testi-user">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#06B6D4,#3B82F6)">A</div>
+          <div><div class="testi-name">Anita Koirala</div><div class="testi-role">HR Manager @ Aurum</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"The custom agent we built handles 78% of our tier-1 support tickets without human intervention. Our team now focuses on real engineering challenges."</div>
+        <div class="testi-user">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#F59E0B,#EF4444)">J</div>
+          <div><div class="testi-name">Dipesh Gurung</div><div class="testi-role">Engineering Lead @ Redline</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"Security was our biggest concern. Nexora's SOC 2 compliance and on-prem deployment option made it an easy decision for our legal team. Remarkable product."</div>
+        <div class="testi-user">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#10B981,#06B6D4)">L</div>
+          <div><div class="testi-name">Maya Adhikari</div><div class="testi-role">Legal Counsel @ SecureTech</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"I'm a solo founder and Nexora is essentially my entire ops team. It writes my emails, analyses my metrics, and even drafts investor updates. It's like having a co-founder."</div>
+        <div class="testi-user">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#8B5CF6,#F59E0B)">R</div>
+          <div><div class="testi-name">Ramesh KC</div><div class="testi-role">Founder @ StartUp</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-label reveal">
+      <div class="badge">✦ FAQ</div>
+      <h2 class="section-title">Questions? <span class="grad-text">We've got answers</span></h2>
+      <p class="section-sub">Everything you need to know about Nexora AI. Can't find what you're looking for? Chat with our team.</p>
+    </div>
+    <div class="faq-list reveal" id="faqList">
+
+      <div class="faq-item">
+        <button class="faq-question">Is there a free trial for the Pro plan?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes! Every Pro plan starts with a 14-day free trial — no credit card required. You get full access to all Pro features during the trial period. If you choose not to upgrade, you're automatically moved to the Free plan at the end of the trial.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How does Nexora handle data privacy and security?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">We take security extremely seriously. Nexora is SOC 2 Type II certified, uses AES-256 encryption at rest and TLS 1.3 in transit, and never uses your data to train our models. Enterprise customers can also opt for private cloud or on-premise deployment for complete data sovereignty.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can I connect my own data sources and tools?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Absolutely. Nexora supports 200+ native integrations including Slack, Notion, Salesforce, HubSpot, GitHub, Google Drive, PostgreSQL, and more. We also offer a robust REST API and webhook system so you can connect virtually any internal tool or custom data source.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What AI models does Nexora use under the hood?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Nexora 3.0 is built on a proprietary multi-model architecture that combines several leading LLMs with our own fine-tuned reasoning layers. This lets us route tasks to the most capable model for each job type — ensuring maximum accuracy and speed. Enterprise customers can also bring their own models via our model gateway.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How does the yearly billing discount work?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">When you choose yearly billing, you save 25% compared to monthly. The full year is billed upfront as a single payment. You can switch from monthly to yearly at any time — your remaining monthly period is prorated and credited toward the annual plan. Cancellations receive a prorated refund for unused months.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do you offer support and onboarding assistance?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Free users have access to our community forum and documentation. Pro users get 24/7 priority chat and email support with a typical response time under 2 hours. Enterprise customers receive a dedicated Customer Success Manager, custom onboarding sessions, and a private Slack channel with the Nexora engineering team.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner" id="contact">
+  <div class="container">
+    <div class="cta-inner reveal scale-in">
+      <h2 class="cta-title">Ready to build with<br><span class="grad-text">intelligence?</span></h2>
+      <p class="cta-sub">Join 500,000+ teams already using Nexora AI to work smarter every day.</p>
+      <div class="cta-btns">
+        <a href="#" class="btn-hero-primary" data-toast='["🚀","You are on the list!","Welcome to the future of work."]'>Start for Free — No Card Required →</a>
+        <a href="#" class="btn-hero-secondary" data-toast='["📅","Demo Booked!","Our team will reach out within 24h."]'>Book a Demo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="font-size:20px;display:inline-flex">
+          <div class="nav-logo-icon" style="width:32px;height:32px;font-size:16px">✦</div>
+          Nexora AI
+        </a>
+        <p>The AI platform for modern teams — built to automate, analyse, and accelerate everything you do.</p>
+        <div class="social-row">
+          <a href="#" class="social-btn" title="X (Twitter)" data-toast='["𝕏","Twitter / X","Follow us @NexoraAI"]'>𝕏</a>
+          <a href="#" class="social-btn" title="LinkedIn"    data-toast='["in","LinkedIn","Connect with us!"]'>in</a>
+          <a href="#" class="social-btn" title="GitHub"      data-toast='["⌥","GitHub","Open source coming soon!"]'>⌥</a>
+          <a href="#" class="social-btn" title="Discord"     data-toast='["◈","Discord","Join 12K+ members"]'>◈</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Changelog</a></li>
+          <li><a href="#">Roadmap</a></li>
+          <li><a href="#">API Docs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Status Page</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Security</a></li>
+         
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Nexora AI, Inc. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
